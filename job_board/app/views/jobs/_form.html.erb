@@ -1,0 +1,11 @@
+<h2>新增</h2>
+
+<%= simple_form_for @job, html:{class: 'form-horizontal'} do |f|%>
+
+<%= f.collection_select :category_id, Category.all, :id, :name, {prompt: "Choose a category"}%>
+<%= f.input :title, label: "Job Title",class: "form-control" %>
+<%= f.input :description, label: "Descripiton",class: "form-control" %>
+<%= f.input :company, label: "Company",class: "form-control" %>
+<%= f.input :url, label: "URL",class: "form-control" %>
+<%= f.submit "新增" %>
+<% end %>

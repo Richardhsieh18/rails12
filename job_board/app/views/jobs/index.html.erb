@@ -1,0 +1,13 @@
+本APP重點在Category的使用
+
+<% @jobs.each do |j| %>
+<div class="thumbnail text-center">
+<h2><p><%= link_to j.title, job_path(j) %></p></h2>
+<hr>
+<p><%= j.description %></p>
+<p><%= j.company %></p>
+<p><%= j.url %></p>
+</div>
+<% end %>
+
+<%= link_to 'NEW', new_job_path %>
