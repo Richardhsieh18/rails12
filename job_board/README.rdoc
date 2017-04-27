@@ -2,7 +2,7 @@ Build A Jobs Board In Rails 4
 重點在建立Category分類功能
 application.html.erb
 
-<%= link_to c.name, jobs_path(category: c.name)%>
+  <%= link_to c.name, jobs_path(category: c.name)%>
 
 及jobs_controller.rb裡的index
   def index
