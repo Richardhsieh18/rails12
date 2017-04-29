@@ -1,28 +1,25 @@
-== README
+points
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+times.ago
+  <%= time_ago_in_words(comment.created_at) %>
 
-Things you may want to cover:
+devise add_name_column
+  class ApplicationController < ActionController::Base
+    before_action :configure_permitted_parameters, if: :devise_controller?
 
-* Ruby version
+    protected
 
-* System dependencies
+    def configure_permitted_parameters
+      devise_parameter_sanitizer.permit(:sign_up, keys: [:username])
+    end
+  end
 
-* Configuration
+gem 'acts_as_votable'
+  https://github.com/ryanto/acts_as_votable
 
-* Database creation
+button filter in view
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+  <% if link.user == current_user %>
+  <td><%= link_to 'Edit', edit_link_path(link) %></td>
+  <td><%= link_to 'Destroy', link, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <% end %>
