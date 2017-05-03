@@ -1,3 +1,10 @@
+加上幾樓留言！！
+
+		<% @post.comments.each do |comment| %>
+		<%= render(:partial => '/comments/comment' , :locals => {:comment => comment}) %>
+	 !!!! <%= @post.comments.index(comment) %>
+		<% end %>
+
 current_page_cool_function
 
       <% if current_page?(root_path) %>
