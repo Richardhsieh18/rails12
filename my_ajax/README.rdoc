@@ -1,0 +1,3 @@
+Not a good example for Ajax Rails
+too much paste code and repeat
+I should find another one.
